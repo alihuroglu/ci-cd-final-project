@@ -55,5 +55,5 @@ spec:
           #!/bin/bash
           set -e
           python -m pip install --upgrade pip wheel
-          pip install -r requirements.txt
+          pip install --user -r requirements.txt
           nosetests $(params.args)
