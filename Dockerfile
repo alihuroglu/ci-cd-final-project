@@ -3,9 +3,8 @@ FROM python:3.9-slim
 # Establish a working folder
 WORKDIR /app
 
-# Establish dependencies pip install --user -r requirements.txt
+# Establish dependencies pip install --user -r requirements.txt COPY requirements.txt .
 
-COPY requirements.txt .
 RUN python -m pip install -U pip wheel && \
     
     pip install Werkzeug==2.1.2 && \
